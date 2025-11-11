@@ -1,0 +1,79 @@
+{
+  "personalInfo": {
+    "name": "Max Mustermann",
+    "location": "Berlin",
+    "phone": "+49 170 1234567",
+    "email": "max.mustermann@email.de",
+    "github": "https://github.com/maxmustermann",
+    "linkedin": "https://linkedin.com/in/maxmustermann",
+    "profileImage": "https://picsum.photos/200/300"
+  },
+  "profile": "Engagierter Softwareentwickler mit 5+ Jahren Erfahrung in Web-, Cloud- und Backend-Entwicklung. Fokus auf sauberen Code, agile Prozesse und moderne Technologien wie Python, JavaScript, TypeScript, React, Node.js und Docker.",
+  "experience": [
+    {
+      "title": "Softwareentwickler",
+      "company": "TechSolutions GmbH",
+      "location": "Berlin",
+      "period": "03/2021 – heute",
+      "responsibilities": [
+        "Entwicklung von Microservices mit Node.js & Python (FastAPI)",
+        "Frontend-Entwicklung mit React & TypeScript",
+        "CI/CD mit GitHub Actions und Docker",
+        "Arbeiten im agilen Scrum-Team"
+      ]
+    },
+    {
+      "title": "Junior Softwareentwickler",
+      "company": "WebSoft AG",
+      "location": "Hamburg",
+      "period": "07/2018 – 02/2021",
+      "responsibilities": [
+        "Webentwicklung mit JavaScript, HTML5, CSS3",
+        "Backend-Entwicklung mit Python (Django)",
+        "Optimierung von PostgreSQL-Abfragen",
+        "Testautomatisierung & Code Reviews"
+      ]
+    },
+    {
+      "title": "Test",
+      "company": "Test",
+      "location": "Test",
+      "period": "",
+      "responsibilities": [
+        "Test"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science – Informatik",
+      "institution": "Technische Universität Berlin",
+      "period": "10/2014 – 09/2018"
+    }
+  ],
+  "skills": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Django",
+    "Docker",
+    "AWS",
+    "Git",
+    "Linux"
+  ],
+  "projects": [
+    {
+      "name": "SmartHome Dashboard",
+      "description": "Open-Source-Webapp zur Visualisierung von IoT-Daten (React + FastAPI + MQTT, 500+ GitHub Stars)",
+      "icon": "💡"
+    },
+    {
+      "name": "ChatBot für Kundensupport",
+      "description": "KI-basierter Chatbot mit Python (Rasa), reduzierte manuelle Anfragen um 30 %",
+      "icon": "🚀"
+    }
+  ],
+  "interests": "Open-Source · KI & Machine Learning · Musikproduktion · Wandern"
+}

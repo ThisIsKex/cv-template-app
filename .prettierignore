@@ -1,0 +1,13 @@
+# Prettier Ignore
+node_modules
+dist
+dist-ssr
+*.local
+.vscode
+.idea
+coverage
+*.log
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+public/cv-data.json
