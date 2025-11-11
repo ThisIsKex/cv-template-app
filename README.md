@@ -28,6 +28,22 @@ Optimiert für PDF-Export mit perfektem Print-Layout.
 npm install
 ```
 
+## ⚙️ Erste Einrichtung
+
+**Wichtiger Schritt:** Bevor Sie die App das erste Mal starten, müssen Sie die Beispiel-CV-Daten kopieren:
+
+```bash
+# Kopieren Sie die Beispiel-Datei zur echten CV-Datei
+cp public/cv-data-example.json public/cv-data.json
+```
+
+**Windows (PowerShell/CMD):**
+```cmd
+copy public\cv-data-example.json public\cv-data.json
+```
+
+Die Datei `cv-data-example.json` enthält Beispieldaten, die Sie als Ausgangspunkt verwenden können.
+
 ## 💻 Entwicklung
 
 ```bash
