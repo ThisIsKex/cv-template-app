@@ -139,6 +139,12 @@ const handlePrint = () => {
 }
 
 @media print {
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+
   .print-controls {
     display: none;
   }

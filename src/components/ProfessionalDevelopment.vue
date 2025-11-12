@@ -24,7 +24,7 @@ defineProps<{
 
 <style scoped>
 .cv-section {
-  margin: 30px auto;
+  margin: 0px auto;
   max-width: 900px;
   background: white;
   padding: 30px 40px;
@@ -48,15 +48,14 @@ h2 {
 }
 
 .development-item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   page-break-inside: avoid;
   break-inside: avoid;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas: 
+  grid-template-areas:
     "title period"
     "description .";
-  gap: 10px 20px;
 }
 
 .development-item:last-child {
@@ -81,26 +80,15 @@ h2 {
   align-self: baseline;
 }
 
-.description {
-  grid-area: description;
-  margin: 8px 0 0 0;
-  line-height: 1.6;
-  color: #555;
-}
-
 @media print {
   .cv-section {
     box-shadow: none;
-    margin: 5px auto;
     page-break-inside: auto;
-    padding: 15px 1.5cm;
   }
-  
+
   .development-item {
     page-break-inside: avoid;
     break-inside: avoid;
-    margin-bottom: 12px;
-    gap: 5px 15px;
   }
 }
 </style>

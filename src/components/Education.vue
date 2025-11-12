@@ -78,16 +78,12 @@ h2 {
 @media print {
   .cv-section {
     box-shadow: none;
-    margin: 5px auto;
     page-break-inside: auto;
-    padding: 15px 1.5cm;
   }
-  
+
   .education-item {
     page-break-inside: avoid;
     break-inside: avoid;
-    margin-bottom: 12px;
-    gap: 5px 15px;
   }
 }
 </style>

@@ -39,16 +39,10 @@ h2 {
   font-size: 18px;
 }
 
-p {
-  margin: 0;
-}
-
 @media print {
   .cv-section {
     box-shadow: none;
-    margin: 5px auto;
     page-break-inside: avoid;
-    padding: 15px 1.5cm;
   }
 }
 </style>

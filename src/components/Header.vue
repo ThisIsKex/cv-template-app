@@ -9,27 +9,24 @@ defineProps<{
 <template>
   <header class="cv-header">
     <div class="header-content">
-      <img
-        v-if="personalInfo.profileImage"
-        :src="personalInfo.profileImage"
-        :alt="personalInfo.name"
-        class="profile-image"
-      />
+      <img v-if="personalInfo.profileImage" :src="personalInfo.profileImage" :alt="personalInfo.name"
+        class="profile-image" />
       <div class="header-text">
         <h1>{{ personalInfo.name }}</h1>
+        <p class="location" v-if="personalInfo.location">
+          <font-awesome-icon icon="map-marker-alt" />
+          {{ personalInfo.location }}
+        </p>
         <p class="contact-info">
-          <span>
-            <font-awesome-icon icon="map-marker-alt" />
-            {{ personalInfo.location }}
-          </span>
-          <span>
+          <a v-if="personalInfo.phone" :href="`tel:${personalInfo.phone}`">
             <font-awesome-icon icon="phone" />
             {{ personalInfo.phone }}
-          </span>
-          <span>
+          </a>
+          <span v-if="personalInfo.phone && personalInfo.email">|</span>
+          <a v-if="personalInfo.email" :href="`mailto:${personalInfo.email}`">
             <font-awesome-icon icon="envelope" />
             {{ personalInfo.email }}
-          </span>
+          </a>
         </p>
         <p class="social-links" v-if="personalInfo.github || personalInfo.linkedin">
           <a v-if="personalInfo.github" :href="personalInfo.github" target="_blank">
@@ -56,18 +53,17 @@ defineProps<{
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 30px;
+  align-items: start;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
@@ -97,23 +93,40 @@ defineProps<{
   line-height: 1.4;
 }
 
-.contact-info span {
-  margin-right: 15px;
+.contact-info a {
+  color: white;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  white-space: nowrap;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-info span {
+  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.location {
+  margin: 8px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .social-links {
-  margin: 10px 0 0 -10px;
+  margin: 10px 0 0 0;
   font-size: 14px;
 }
 
 .social-links a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -123,16 +136,13 @@ defineProps<{
   text-decoration: underline;
 }
 
+.social-links span {
+  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
 @media print {
-  @page {
-    margin: 0;
-    size: A4;
-  }
-
-  @page :first {
-    margin: 0;
-  }
-
   .cv-header {
     background-color: #0e5091 !important;
     color: white !important;
@@ -145,27 +155,35 @@ defineProps<{
     text-align: left;
     break-after: avoid;
     page-break-after: avoid;
+    border-radius: 12px;
   }
 
   .header-content {
-    display: table;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    align-items: start;
     width: 100%;
-    table-layout: fixed;
   }
 
   .profile-image {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    width: 80px;
-    height: 80px;
-    float: left;
-    margin-right: 20px;
-    margin-top: 5px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    float: none;
+    margin: 0;
   }
 
   .header-text {
     display: block;
-    margin-left: 100px;
+    margin: 0;
+    text-align: left;
+    min-width: 0;
+    padding-left: 15px;
   }
 
   .cv-header h1 {
@@ -181,9 +199,18 @@ defineProps<{
     margin: 6px 0;
   }
 
+  .contact-info a {
+    color: white !important;
+    text-decoration: none;
+  }
+
   .contact-info span {
-    margin-right: 10px;
-    white-space: nowrap;
+    margin: 0 6px;
+  }
+
+  .location {
+    font-size: 11px;
+    margin: 4px 0 8px 0;
   }
 
   .social-links {
@@ -194,34 +221,6 @@ defineProps<{
   .social-links a {
     color: white !important;
     margin-right: 10px;
-  }
-}
-
-@media (max-width: 750px) {
-  .header-content {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .header-text {
-    text-align: center;
-    min-width: 0;
-  }
-  
-  .cv-header h1 {
-    font-size: 2.1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .contact-info span {
-    display: block;
-    margin: 8px 0;
-    justify-content: center;
-  }
-  
-  .cv-header h1 {
-    font-size: 1.9rem;
   }
 }
 </style>

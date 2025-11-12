@@ -35,16 +35,10 @@ h2 {
   gap: 10px;
 }
 
-.section-icon {
-  font-size: 18px;
-}
-
 @media print {
   .cv-section {
     box-shadow: none;
-    margin: 5px auto;
     page-break-inside: avoid;
-    padding: 15px 1.5cm;
   }
 }
 </style>
