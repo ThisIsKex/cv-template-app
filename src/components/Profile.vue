@@ -39,6 +39,7 @@ h2 {
   .cv-section {
     box-shadow: none;
     page-break-inside: avoid;
+    max-width: 100%;
   }
 }
 </style>

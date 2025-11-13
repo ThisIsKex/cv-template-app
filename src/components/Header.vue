@@ -151,6 +151,7 @@ defineProps<{
     print-color-adjust: exact;
     margin: 0 !important;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     text-align: left;
     break-after: avoid;

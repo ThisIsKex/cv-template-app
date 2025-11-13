@@ -68,7 +68,7 @@ h2 {
 .experience-item h3 {
   grid-area: title;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   min-width: 0;
   word-wrap: break-word;
@@ -78,7 +78,7 @@ h2 {
 .experience-item .period {
   grid-area: period;
   color: #777;
-  font-size: 16px;
+  font-size: 14px;
   white-space: nowrap;
   align-self: baseline;
 }
@@ -102,11 +102,19 @@ li {
   .cv-section {
     box-shadow: none;
     page-break-inside: auto;
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 20px 40px;
+  }
+
+  h2 {
+    margin: 0 0 12px 0;
   }
 
   .experience-item {
     page-break-inside: avoid;
     break-inside: avoid;
+    margin-bottom: 15px;
   }
 }
 </style>

@@ -39,7 +39,6 @@ h2 {
   font-size: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .section-icon {
@@ -61,7 +60,7 @@ h2 {
 
 .education-item h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   min-width: 0;
   word-wrap: break-word;
@@ -70,7 +69,7 @@ h2 {
 
 .education-item .period {
   color: #777;
-  font-size: 16px;
+  font-size: 14px;
   white-space: nowrap;
   align-self: baseline;
 }
@@ -79,11 +78,19 @@ h2 {
   .cv-section {
     box-shadow: none;
     page-break-inside: auto;
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 20px 40px;
+  }
+
+  h2 {
+    margin: 0 0 12px 0;
   }
 
   .education-item {
     page-break-inside: avoid;
     break-inside: avoid;
+    margin-bottom: 10px;
   }
 }
 </style>
